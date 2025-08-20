@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import Sidebar from './Dashboard-client/Sidebar';
+import TopSection from './Dashboard-client/TopSection';
+import Charts from './Dashboard-client/Charts';
+import ActivityClientSection from './Dashboard-client/ActivityClientSection';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Sidebar />
+      <div className="main-content">
+        <TopSection />
+        <Charts />
+        <ActivityClientSection />
+      </div>
     </div>
   );
 }

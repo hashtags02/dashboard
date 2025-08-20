@@ -1,0 +1,120 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: url('./Background.png') no-repeat center center fixed; /* ✅ keep Background.png inside src or public */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.login-card {
+  background: rgba(30, 0, 40, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+h2 {
+  margin: 0 0 5px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+}
+
+.forgot-password {
+  color: #49d;
+  font-size: 12px;
+  text-align: right;
+  margin: 5px 0 15px;
+  text-decoration: none;
+}
+
+.signin-btn {
+  background: linear-gradient(90deg, #ff5cc0, #a84cff);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #555;
+  margin: 0 10px;
+}
+
+.google-btn {
+  background: #111;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.signup-text {
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.signup-text a {
+  color: #f78;
+  text-decoration: none;
+}
+
+footer {
+  font-size: 11px;
+  margin-top: 20px;
+  color: #aaa;
+}

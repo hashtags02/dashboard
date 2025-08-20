@@ -1,0 +1,28 @@
+/* -------------- Verification Section Wrapper -------------- */
+.verification-section {
+  background-color: #14173a;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 300px;
+  box-sizing: border-box;
+  margin: 0; /* Prevent spacing issues */
+}
+
+.verification-section h3 {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+/* Optional: Add chart container styles if needed */
+.verification-chart {
+  width: 100%;
+  height: 250px;
+}
+
+/* For Chart.js or similar libraries, you can target canvas */
+.verification-section canvas {
+  width: 100% !important;
+  height: auto !important;
+}

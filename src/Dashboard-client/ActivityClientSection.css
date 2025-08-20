@@ -1,0 +1,57 @@
+/* Main wrapper for both sections */
+.activity-client-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px 30px;
+  background-color: #0b0f2c;
+  border-radius: 15px;
+  flex-wrap: wrap;
+}
+
+/* Left Section: Recent Activity */
+.recent-activity-section {
+  flex: 2;
+  background-color: #14173a;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.recent-activity-section h3 {
+  margin-bottom: 15px;
+  font-weight: 200px;
+  font-size: 22px;
+  color: white;
+}
+
+.activity-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px; /* adds vertical spacing between rows */
+  color: #ccc;
+  font-size: 14px;
+}
+
+.activity-table thead th {
+  text-align: left;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: #aaa;
+}
+
+.activity-table tbody tr {
+  background-color: #1b1f41;
+  transition: background 0.3s ease;
+}
+
+.activity-table tbody tr:hover {
+  background-color: #252a55;
+}
+
+.activity-table td {
+  padding: 20px 5px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #2c2f4a;
+  border-left: none;
+  border-right: none;
+  border-radius: 6px;
+}

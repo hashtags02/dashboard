@@ -1,0 +1,106 @@
+/* -------------- General Reset -------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e112b;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* -------------- Top Section Wrapper -------------- */
+.top-section {
+  padding: 30px;
+}
+
+/* -------------- Top Bar (Search + Icons) -------------- */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #14173a;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 300px;
+  border: 1px solid #3f3a5e;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  margin-left: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.search-icon {
+  color: #aaa;
+}
+
+.top-icons .icon {
+  font-size: 22px;
+  margin-left: 25px;
+  color: #e54db4;
+  cursor: pointer;
+}
+
+/* -------------- Summary Cards -------------- */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 70px;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #14173a;
+  border: 1px solid #e54db4;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #1e2146;
+}
+
+.card-icon {
+  font-size: 30px;
+  color: #e54db4;
+}
+
+.card h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card h2 {
+  margin: 5px 0;
+  font-size: 24px;
+  color: white;
+}
+
+.card p {
+  margin: 0;
+  font-size: 13px;
+  color: #888;
+}

@@ -1,0 +1,64 @@
+/* -------------- Device Section Wrapper -------------- */
+.device-section {
+  background-color: #14173a;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 48%;
+  box-sizing: border-box;
+  margin: 0; /* No extra gap around */
+}
+
+.device-section h3 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 34px;
+}
+
+/* -------------- Donut Chart and Legend Container -------------- */
+.device-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* -------------- Legend Styling -------------- */
+.legend {
+  list-style: none;
+  padding: 40px;
+
+  color: #ccc;
+  font-size: 25px;
+  font-family: jakarta, sans-serif;
+  
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* -------------- Dot Colors (Example) -------------- */
+.purple {
+  background-color: #C73EF3;
+}
+
+.blue-light {
+  background-color: #31D6FB;
+}
+
+.blue-dark {
+  background-color: #fb07be;
+}
