@@ -4,6 +4,9 @@
   width: 100vw;
   
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../assets/Background.png');
 
   display: flex;
   justify-content: center;
