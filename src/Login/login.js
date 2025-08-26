@@ -23,17 +23,6 @@ function Login({ setIsAuthenticated }) {
   return (
     <div 
       className="login-container"
-      style={{ 
-        backgroundImage: "url('/Background.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        height: "100vh",
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-      }}
     >
       <div className="login-box">
         <form onSubmit={handleSubmit}>
