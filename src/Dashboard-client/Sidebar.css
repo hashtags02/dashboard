@@ -44,6 +44,6 @@
 }
 
 .sidebar .active {
-  background-color: #ff2fb4;
+  background: linear-gradient(90deg, #ff5cc0, #a84cff);
   font-weight: 600;
 }

@@ -51,7 +51,7 @@ body {
 .top-icons .icon {
   font-size: 22px;
   margin-left: 25px;
-  color: #e54db4;
+  color: linear-gradient(90deg, #ff5cc0, #a84cff);
   cursor: pointer;
 }
 

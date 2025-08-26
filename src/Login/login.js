@@ -1,43 +1,65 @@
-import React from "react";
-import "./styles.css"; // ✅ keep your styles here
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
-const Login = () => {
+function Login({ setIsAuthenticated }) {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Dummy credentials
+    if (username === 'admin' && password === '1234') {
+      setIsAuthenticated(true);
+      navigate('/dashboard'); // ✅ Redirect to dashboard
+    } else {
+      setError('Invalid username or password');
+    }
+  };
+
   return (
-    <div className="container">
-      <h1 className="logo">Swayamyou</h1>
-      <div className="login-card">
-        <h2>Sign In</h2>
-        <p className="subtitle">Enter your credentials to access your account</p>
+    <div 
+      style={{ 
+        backgroundImage: "url('/Background.png')", // ✅ loads from public/
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "100vh",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      }}
+    >
+      <div className="login-container">
+        <form onSubmit={handleSubmit} className="login-form">
+          <h2>Login</h2>
+          {error && <p className="error">{error}</p>}
 
-        <form>
-          <label>Email</label>
-          <input type="email" placeholder="Enter your email" required />
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
 
-          <label>Password</label>
-          <input type="password" placeholder="Enter your password" required />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-          <a href="#" className="forgot-password">
-            Forgot password?
-          </a>
-
-          <button type="submit" className="signin-btn">
-            Sign In
-          </button>
-
-          <div className="divider">or</div>
-
-          <button type="button" className="google-btn">
-            Continue with Google
-          </button>
+          <button type="submit">Login</button>
         </form>
-
-        <p className="signup-text">
-          Don’t have an account? <a href="#">Sign up</a>
-        </p>
       </div>
-      <footer>© 2025 Swayamyou. All rights reserved.</footer>
     </div>
   );
-};
+}
 
 export default Login;
