@@ -22,9 +22,8 @@ function Login({ setIsAuthenticated }) {
 
   return (
     <div 
-      className="login-container"
       style={{ 
-        backgroundImage: "url('/Background.png')",
+        backgroundImage: "url('/Background.png')", // ✅ loads from public/
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
