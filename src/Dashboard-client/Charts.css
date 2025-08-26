@@ -1,11 +1,17 @@
 .charts-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 10px;         /* smaller padding */
-  gap: 20px;             /* smaller gap */
-  background-color: #0b0f2c;
+  padding: 0 30px;
+  gap: 24px;
+  background-color: #0B0F2C;
   color: white;
   flex-wrap: wrap;
-  margin-top: -80px; /* Adjusted to align with other sections */
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  .charts-wrapper {
+    flex-direction: column;
+  }
 }
   

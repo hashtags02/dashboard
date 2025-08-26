@@ -6,14 +6,15 @@
 }
 
 body {
-  background-color: #0e112b;
+  background-color: #0B0F2C;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* -------------- Top Section Wrapper -------------- */
 .top-section {
   padding: 30px;
+  background-color: #0B0F2C;
 }
 
 /* -------------- Top Bar (Search + Icons) -------------- */
@@ -21,17 +22,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #14173a;
+  background-color: #1A1E3A;
   border-radius: 10px;
-  padding: 10px 15px;
-  width: 300px;
-  border: 1px solid #3f3a5e;
+  padding: 12px 16px;
+  width: 350px;
+  border: 1px solid #2A2F4F;
 }
 
 .search-bar input {
@@ -42,65 +43,95 @@ body {
   margin-left: 10px;
   font-size: 14px;
   width: 100%;
+  font-family: inherit;
+}
+
+.search-bar input::placeholder {
+  color: #6B7280;
 }
 
 .search-icon {
-  color: #aaa;
+  color: #6B7280;
+  font-size: 16px;
+}
+
+.top-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .top-icons .icon {
   font-size: 22px;
-  margin-left: 25px;
-  color: linear-gradient(90deg, #ff5cc0, #a84cff);
+  color: #6B7280;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.top-icons .icon:hover {
+  color: #E879F9;
 }
 
 /* -------------- Summary Cards -------------- */
 .cards {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
 .card {
-  flex: 1;
-  min-width: 220px;
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: #14173a;
-  border: 1px solid #e54db4;
-  transition: transform 0.3s ease;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #1A1E3A;
+  border: 1px solid #2A2F4F;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  background-color: #1e2146;
+  transform: translateY(-2px);
+  border-color: #E879F9;
+  box-shadow: 0 8px 25px rgba(232, 121, 249, 0.1);
 }
 
 .card-icon {
-  font-size: 30px;
-  color: #e54db4;
+  font-size: 24px;
+  color: #E879F9;
+  background: linear-gradient(135deg, #E879F9 0%, #A855F7 100%);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.card div {
+  flex: 1;
 }
 
 .card h4 {
-  margin: 0;
+  margin: 0 0 8px 0;
   font-size: 14px;
-  color: #ccc;
+  color: #9CA3AF;
+  font-weight: 500;
 }
 
 .card h2 {
-  margin: 5px 0;
-  font-size: 24px;
+  margin: 0 0 4px 0;
+  font-size: 28px;
   color: white;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .card p {
   margin: 0;
-  font-size: 13px;
-  color: #888;
+  font-size: 12px;
+  color: #6B7280;
+  font-weight: 400;
 }

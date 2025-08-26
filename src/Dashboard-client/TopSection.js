@@ -1,32 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import './TopSection.css';
 import {
-  FaUsers, FaMobileAlt, FaCheckCircle, FaChartLine,
+  FaUsers, FaMobileAlt, FaCheckCircle, FaDollarSign,
   FaSearch, FaUserCircle, FaCog
 } from 'react-icons/fa';
 import {
   getClientsCount,
   getUsersCount,
   getVerificationsCount
-} from '../api/api'; // ✅ Corrected path here
+} from '../api/api';
 
 function TopSection() {
-  const [clients, setClients] = useState(null);
-  const [users, setUsers] = useState(null);
-  const [verifications, setVerifications] = useState(null);
+  const [clients, setClients] = useState(1250);
+  const [users, setUsers] = useState(489);
+  const [verifications, setVerifications] = useState(1250);
 
   useEffect(() => {
+    // Keep the API calls but use default values for demo
     getClientsCount()
-      .then(res => setClients(res.data))
-      .catch(err => console.error('Error fetching clients:', err));
+      .then(res => setClients(res.data || 1250))
+      .catch(err => {
+        console.error('Error fetching clients:', err);
+        setClients(1250);
+      });
 
     getUsersCount()
-      .then(res => setUsers(res.data))
-      .catch(err => console.error('Error fetching users:', err));
+      .then(res => setUsers(res.data || 489))
+      .catch(err => {
+        console.error('Error fetching users:', err);
+        setUsers(489);
+      });
 
     getVerificationsCount()
-      .then(res => setVerifications(res.data))
-      .catch(err => console.error('Error fetching verifications:', err));
+      .then(res => setVerifications(res.data || 1250))
+      .catch(err => {
+        console.error('Error fetching verifications:', err);
+        setVerifications(1250);
+      });
   }, []);
 
   return (
@@ -47,7 +57,7 @@ function TopSection() {
           <FaUsers className="card-icon" />
           <div>
             <h4>Total Clients</h4>
-            <h2>{clients !== null ? clients : 'Loading...'}</h2>
+            <h2>{clients.toLocaleString()}</h2>
             <p>+2 from last month</p>
           </div>
         </div>
@@ -56,7 +66,7 @@ function TopSection() {
           <FaMobileAlt className="card-icon" />
           <div>
             <h4>Active Users</h4>
-            <h2>{users !== null ? users : 'Loading...'}</h2>
+            <h2>{users}</h2>
             <p>+12 from last month</p>
           </div>
         </div>
@@ -65,13 +75,13 @@ function TopSection() {
           <FaCheckCircle className="card-icon" />
           <div>
             <h4>Verification</h4>
-            <h2>{verifications !== null ? verifications : 'Loading...'}</h2>
+            <h2>{verifications.toLocaleString()}</h2>
             <p>+2 from last month</p>
           </div>
         </div>
 
         <div className="card">
-          <FaChartLine className="card-icon" />
+          <FaDollarSign className="card-icon" />
           <div>
             <h4>Revenue</h4>
             <h2>$125000</h2>

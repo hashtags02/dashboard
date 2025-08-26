@@ -1,6 +1,6 @@
 import React from 'react';
 import './Device.css';
-import { PieChart, Pie, Cell } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const pieData = [
   { name: 'Working', value: 40 },
@@ -8,28 +8,34 @@ const pieData = [
   { name: 'Offline', value: 40 },
 ];
 
-const COLORS = ['#C73EF3', '#31D6FB', '#fb07be'];
+const COLORS = ['#E879F9', '#3B82F6', '#1E40AF'];
 
 function Device() {
   return (
     <div className="device-section">
       <h3>Device Update</h3>
       <div className="device-chart-container">
-        <PieChart width={250} height={250}>
-          <Pie
-            data={pieData}
-            cx="50%"
-            cy="50%"
-            innerRadius={60}
-            outerRadius={90}
-            paddingAngle={5}
-            dataKey="value"
-          >
-            {pieData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index]} />
-            ))}
-          </Pie>
-        </PieChart>
+        <div style={{ position: 'relative', width: 250, height: 250 }}>
+          <PieChart width={250} height={250}>
+            <Pie
+              data={pieData}
+              cx="50%"
+              cy="50%"
+              innerRadius={70}
+              outerRadius={100}
+              paddingAngle={2}
+              dataKey="value"
+            >
+              {pieData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={COLORS[index]} />
+              ))}
+            </Pie>
+          </PieChart>
+          <div className="chart-center-text">
+            <div className="percentage">40%</div>
+            <div className="label">20%</div>
+          </div>
+        </div>
 
         <ul className="legend">
           <li><span className="dot purple"></span>Working</li>
