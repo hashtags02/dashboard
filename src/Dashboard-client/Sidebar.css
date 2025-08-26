@@ -5,13 +5,14 @@
   min-height: 100vh;
   padding: 30px 20px;
   box-sizing: border-box;
+  border-right: 1px solid rgba(255,255,255,0.06);
 }
 
 .logo-text {
   font-size: 35px; /* fixed typo */
   font-weight: 700;
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   line-height: 1.2;
 }
 
@@ -30,13 +31,13 @@
 .sidebar li {
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 12px 16px;
-  margin-bottom: 30px;
-  font-size: 20px;
+  gap: 14px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.2s ease;
 }
 
 .sidebar li:hover {
@@ -46,4 +47,8 @@
 .sidebar .active {
   background: linear-gradient(90deg, #ff5cc0, #a84cff);
   font-weight: 600;
+}
+
+.sidebar .icon {
+  color: #c9c9d6;
 }

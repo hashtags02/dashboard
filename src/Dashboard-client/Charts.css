@@ -1,11 +1,11 @@
 .charts-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 10px;         /* smaller padding */
-  gap: 20px;             /* smaller gap */
+  align-items: stretch;
+  padding: 20px 30px;
+  gap: 24px;
   background-color: #0b0f2c;
   color: white;
   flex-wrap: wrap;
-  margin-top: -80px; /* Adjusted to align with other sections */
 }
   
