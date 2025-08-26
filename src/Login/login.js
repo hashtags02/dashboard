@@ -22,8 +22,9 @@ function Login({ setIsAuthenticated }) {
 
   return (
     <div 
+      className="login-container"
       style={{ 
-        backgroundImage: "url('/Background.png')", // ✅ loads from public/
+        backgroundImage: "url('/Background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -34,8 +35,8 @@ function Login({ setIsAuthenticated }) {
         alignItems: "center"
       }}
     >
-      <div className="login-container">
-        <form onSubmit={handleSubmit} className="login-form">
+      <div className="login-box">
+        <form onSubmit={handleSubmit}>
           <h2>Login</h2>
           {error && <p className="error">{error}</p>}
 
