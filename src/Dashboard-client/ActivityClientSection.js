@@ -1,37 +1,34 @@
-import React from 'react';
-import './ActivityClientSection.css';
-import TopClients from './TopClients'; // ✅ Import the separate TopClients component
+import React from "react";
+import "./ActivityClientSection.css";
 
-const ActivityClientSection = () => {
+function ActivityClientSection() {
   return (
-    <div className="activity-client-wrapper">
-      {/* Left: Recent Activity */}
-      <div className="recent-activity-section">
+    <div className="bottom">
+      <div className="recent">
         <h3>Recent Activity</h3>
-        <table className="activity-table">
+        <table>
           <thead>
-            <tr>
-              <th>COMPONENT</th>
-              <th>Device ID</th>
-              <th>Time</th>
-            </tr>
+            <tr><th>COMPANIES</th><th>EVENT ID</th><th>TIME</th></tr>
           </thead>
           <tbody>
-            {Array.from({ length: 5 }).map((_, i) => (
-              <tr key={i}>
-                <td>New Device Registered</td>
-                <td>P-10V</td>
-                <td>2 mins ago</td>
-              </tr>
-            ))}
+            <tr><td>New Device Registered</td><td>P-107V</td><td>2 mins ago</td></tr>
+            <tr><td>New Device Registered</td><td>P-107V</td><td>2 mins ago</td></tr>
           </tbody>
         </table>
       </div>
-
-      {/* Right: Top Clients - now imported as a component */}
-      <TopClients />
+      <div className="clients">
+        <h3>Top Clients</h3>
+        <ul>
+          <li>Acme Corporation</li>
+          <li>Global Company</li>
+          <li>Server Paymental</li>
+          <li>Blockval</li>
+          <li>Rocketwhiz</li>
+          <li>System</li>
+        </ul>
+      </div>
     </div>
   );
-};
+}
 
 export default ActivityClientSection;

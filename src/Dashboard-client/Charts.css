@@ -1,17 +1,20 @@
-.charts-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30px;
-  gap: 24px;
-  background-color: #0B0F2C;
-  color: white;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+.charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  flex: 1;
 }
 
-@media (max-width: 1200px) {
-  .charts-wrapper {
-    flex-direction: column;
-  }
+.chart-box {
+  background: #14173a;
+  border: 1px solid #3f3a5e;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 350px;   /* ✅ ensures graph space */
 }
-  
+
+.chart-box h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}

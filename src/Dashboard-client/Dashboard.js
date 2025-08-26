@@ -9,11 +9,11 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <Sidebar />
-      <main className="main">
+      <div className="main-content">
         <TopSection />
         <Charts />
         <ActivityClientSection />
-      </main>
+      </div>
     </div>
   );
 }
