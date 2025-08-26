@@ -1,14 +1,15 @@
 .app {
   display: flex;
   background-color: #11132D;
-  min-height: 500vh;
+  min-height: 100vh;
 }
 
 .main-content {
   flex: 1;
   display: flex;
-  flex-direction: column; /* Stacks TopSection and Charts vertically */
-  padding: 30px;
+  flex-direction: column;
+  padding: 0;
   color: white;
-  background-color: #11132D;
+  background-color: #0B0F2C;
+  overflow-x: hidden;
 }
