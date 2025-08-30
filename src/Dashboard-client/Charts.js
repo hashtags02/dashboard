@@ -35,7 +35,7 @@ const pieData = [
   { name: "Offline", value: 40 }
 ];
 
-const COLORS = ["#00C49F", "#FFBB28", "#FF5CC0"];
+const COLORS = ["#8B2EF5", "#1A40CF", "#17D2F3"];
 
 function Charts() {
   return (
@@ -50,7 +50,7 @@ function Charts() {
             <YAxis stroke="#aaa" />
             <Tooltip />
             <Line type="monotone" dataKey="uv" stroke="#FF5CC0" strokeWidth={2} />
-            <Line type="monotone" dataKey="pv" stroke="#00C49F" strokeWidth={2} />
+            <Line type="monotone" dataKey="pv" stroke="#8B2EF5" strokeWidth={2} />
           </LineChart>
         </ResponsiveContainer>
       </div>
